@@ -1,0 +1,67 @@
+﻿@model WebForYouUI.Infrastructure.Concrete.AuthenticationModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Вход в админ-панель</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+    <style>
+        .field-validation-error {
+            color: #ff0000;
+        }
+
+        .field-validation-valid {
+            display: none;
+        }
+
+        .input-validation-error {
+            border: 1px solid #ff0000;
+            background-color: #fee;
+        }
+
+        .validation-summary-errors {
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        .validation-summary-valid {
+            display: none;
+        }
+    </style>
+    <br />
+    <br />
+    <h2 align="center">Вход в Админ-Панель</h2>
+    <br />
+    <div class="" align="center">
+        @using (Html.BeginForm())
+            {
+            @Html.ValidationSummary()
+            <div >
+                <label>Логин  : &nbsp;</label>
+                @Html.TextBoxFor(m => m.Name, new { @class = "" })
+                <br />
+                @Html.ValidationMessageFor(x => x.Name)
+            </div>
+                <br />
+                <div >
+                    <label>Пароль :</label>
+                    @Html.PasswordFor(m => m.Password, new { @class = "" })
+                    <br />
+                    @Html.ValidationMessageFor(x => x.Password)
+                </div>
+
+                <br />
+                <input type="submit" value="Вход в Админ - Панель" class="btn btn-primary" />
+        }
+    </div>
+</body>
+</html>

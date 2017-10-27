@@ -60,6 +60,8 @@ namespace WebForYouUI
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            System.Web.Mvc.DependencyResolver.SetResolver(new
+              Infrastructure.NinjectDependencyResolver(kernel));
         }        
     }
 }

@@ -2,9 +2,10 @@
 
 namespace WebForYouUI.Controllers
 {
-    public class HomeController : Controller
+    public class BlogController : Controller
     {
-        public ActionResult StartPage()
+        
+        public ActionResult Index()
         {
             return View();
         }

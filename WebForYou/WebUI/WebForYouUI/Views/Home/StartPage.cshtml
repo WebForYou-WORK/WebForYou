@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -7,20 +10,16 @@
     <meta name="keywords" content="ключевые слова">
     <meta name="description" content="Веб студия">
     <meta name=“robots” content=“index,follow”>
-    <title>@ViewBag.Title</title>
-
+    <title>WebForYou</title>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
-   
 </head>
-<body>
-<div class="container-fluid">
-    @RenderBody()
 
-        <div class="row">
-            <strong><p class="m-0 text-center text-white">Copyright &copy; <a href="http://webforyou.com.ua/">WEB FOR YOU</a> 2017</p></strong>
-        </div>  
-</div>
+<body>
+    <div class="container-fluid">
+        <h1>Стартовая страница сайта</h1>
+    </div>
     <script src="~/Scripts/jquery-1.9.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
+
 </html>

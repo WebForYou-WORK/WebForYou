@@ -2,8 +2,10 @@
 
 namespace WebForYouUI.Controllers
 {
-    public class HomeController : Controller
+    [Authorize]
+    public class AdminController : Controller
     {
+        
         public ActionResult StartPage()
         {
             return View();
