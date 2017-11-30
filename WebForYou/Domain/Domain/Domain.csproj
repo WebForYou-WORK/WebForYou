@@ -47,12 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\SiteContext.cs" />
+    <Compile Include="Entityes\OrderSite.cs" />
+    <Compile Include="Entityes\SliderOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstrac\" />
-    <Folder Include="Concrete\" />
-    <Folder Include="Entityes\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
