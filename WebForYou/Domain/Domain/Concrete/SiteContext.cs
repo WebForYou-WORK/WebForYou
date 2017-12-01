@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using Domain.Entityes;
 
 namespace Domain.Concrete
@@ -12,7 +11,13 @@ namespace Domain.Concrete
     {
         public virtual DbSet<SliderOfWork> SliderOfWorks { get; set; }
         public virtual DbSet<OrderSite> OrderSites { get; set; }
+        public virtual DbSet<CalcSite> CalcSites { get; set; }
     }
+    public class BlogContext : Context
+    {
+        public virtual DbSet<Blog> Blogs { get; set; }
+    }
+
 
  
 }

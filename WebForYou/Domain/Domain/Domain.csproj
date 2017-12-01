@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Concrete\SiteContext.cs" />
+    <Compile Include="Entityes\Blog.cs" />
+    <Compile Include="Entityes\CalcSite.cs" />
     <Compile Include="Entityes\OrderSite.cs" />
     <Compile Include="Entityes\SliderOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

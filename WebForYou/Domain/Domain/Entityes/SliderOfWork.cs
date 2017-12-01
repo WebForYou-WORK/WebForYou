@@ -26,8 +26,11 @@ namespace Domain.Entityes
 
         [Display(Name = "Картинка слайда")]
         [Required]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Длина адреса от 3 до 50 символов")]
         public string SlidePicture { get; set; }
+
+        [Display(Name = "Номер салайда")]
+        [Required(ErrorMessage = "Пожалуйста, укажите корректный номер слайда")]
+        public int PrioritySlide { get; set; }
 
         [Display(Name = "Дата создания слайда")]
         [Required]
