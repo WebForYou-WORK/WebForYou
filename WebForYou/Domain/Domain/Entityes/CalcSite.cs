@@ -28,8 +28,8 @@ namespace Domain.Entityes
         [Required(ErrorMessage = "Пожалуйста, укажите корректную стоимость модуля")]
         public int ModulePrice { get; set; }
 
-        [Display(Name = "Дата создания слайда")]
+        [Display(Name = "Дата добавления модуля")]
         [Required]
-        public DateTime SlideDateCreate { get; set; }
+        public DateTime ModuleDateCreate { get; set; }
     }
 }

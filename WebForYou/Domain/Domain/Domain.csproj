@@ -47,16 +47,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstrac\IBlogPhotoRepossitory.cs" />
+    <Compile Include="Abstrac\IBlogRepository.cs" />
+    <Compile Include="Abstrac\ICalcSite.cs" />
+    <Compile Include="Abstrac\IOrderSite.cs" />
+    <Compile Include="Abstrac\ISliderOfWoks.cs" />
+    <Compile Include="Concrete\EfBlogPhotoRepossitory.cs" />
+    <Compile Include="Concrete\EfBlogRepository.cs" />
     <Compile Include="Concrete\SiteContext.cs" />
     <Compile Include="Entityes\Blog.cs" />
+    <Compile Include="Entityes\BlogPhoto.cs" />
     <Compile Include="Entityes\CalcSite.cs" />
     <Compile Include="Entityes\OrderSite.cs" />
     <Compile Include="Entityes\SliderOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Abstrac\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

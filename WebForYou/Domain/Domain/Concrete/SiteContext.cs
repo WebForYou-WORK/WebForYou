@@ -17,7 +17,10 @@ namespace Domain.Concrete
     {
         public virtual DbSet<Blog> Blogs { get; set; }
     }
-
+    public class BlogPhotoContext : Context
+    {
+        public virtual DbSet<BlogPhoto> BlogPhotos { get; set; }
+    }
 
  
 }

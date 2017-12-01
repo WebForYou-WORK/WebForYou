@@ -31,5 +31,9 @@ namespace Domain.Entityes
         [Display(Name = "Дата заказа")]
         [Required]
         public DateTime OrderDateCreate { get; set; }
+
+        [Display(Name = "Статус заказа")]
+        [Required]
+        public bool OrderStatus { get; set; }
     }
 }
