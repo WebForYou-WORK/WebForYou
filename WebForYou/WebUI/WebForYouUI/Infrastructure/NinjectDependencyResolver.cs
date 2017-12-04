@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using Domain.Abstrac;
+using Domain.Concrete;
 using WebForYouUI.Infrastructure.Abstract;
 using WebForYouUI.Infrastructure.Concrete;
 using Ninject;
@@ -30,6 +32,11 @@ namespace WebForYouUI.Infrastructure
         private void AddBindings()
         {
             _kernel.Bind<IAuthProvider>().To<FormAuthProvider>();
+            _kernel.Bind<IBlogPhotoRepossitory>().To<EfBlogPhotoRepossitory>();
+            _kernel.Bind<IBlogRepository>().To<EfBlogRepository>();
+            _kernel.Bind<ICalcSite>().To<EfCalcSite>();
+            _kernel.Bind<IOrderSite>().To<EfOrderSite>();
+            _kernel.Bind<ISliderOfWoks>().To<EfSliderOfWoks>();
         }
     }
 }

@@ -54,6 +54,9 @@
     <Compile Include="Abstrac\ISliderOfWoks.cs" />
     <Compile Include="Concrete\EfBlogPhotoRepossitory.cs" />
     <Compile Include="Concrete\EfBlogRepository.cs" />
+    <Compile Include="Concrete\EfCalcSite.cs" />
+    <Compile Include="Concrete\EfOrderSite.cs" />
+    <Compile Include="Concrete\EfSliderOfWoks.cs" />
     <Compile Include="Concrete\SiteContext.cs" />
     <Compile Include="Entityes\Blog.cs" />
     <Compile Include="Entityes\BlogPhoto.cs" />

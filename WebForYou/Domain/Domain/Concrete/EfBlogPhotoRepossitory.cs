@@ -15,8 +15,6 @@ namespace Domain.Concrete
 
         public void SaveBlogPhoto(string urlName)
         {
-            try
-            {
                 if (!string.IsNullOrEmpty(urlName))
                 {
                     _context.BlogPhotos.Add(new BlogPhoto
@@ -26,27 +24,25 @@ namespace Domain.Concrete
                     _context.SaveChanges();
                 }
                 else
-                throw new Exception();
-            }
-            catch (Exception) { //ignored
-            }
-           
+                    throw new Exception();
         }
 
         public void RemoveBlogPhoto(int photoId, DirectoryInfo directory)
         {
-            BlogPhoto photo = _context.BlogPhotos.FirstOrDefault(x=>x.BlogPhotoId==photoId);
-            if (photo!= null)
+            BlogPhoto photo = _context.BlogPhotos.FirstOrDefault(x => x.BlogPhotoId == photoId);
+            if (photo != null)
             {
-                var urlDell = photo.PhotoUrl;
-                _context.BlogPhotos.Remove(photo);
-                _context.SaveChanges();
-                foreach (FileInfo file in directory.GetFiles())
-                {
-                    if (file.ToString() == urlDell)
-                        file.Delete();
-                }
+                    var urlDell = photo.PhotoUrl;
+                    _context.BlogPhotos.Remove(photo);
+                    _context.SaveChanges();
+                    foreach (FileInfo file in directory.GetFiles())
+                    {
+                        if (file.ToString() == urlDell)
+                            file.Delete();
+                    }
             }
+            else
+                throw new Exception();
         }
     }
 }

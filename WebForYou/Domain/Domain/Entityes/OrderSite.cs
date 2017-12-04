@@ -22,7 +22,7 @@ namespace Domain.Entityes
         [Display(Name = "E-mail")]
         [Required(ErrorMessage = "пожалуйста оставьте Ваш E-mail")]
         [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Некорректный адрес")]
-        public string Email { get; set; }
+        public string ClientEmail { get; set; }
 
         [Display(Name = "номер мобильного телефона")]
         [StringLength(20, MinimumLength = 10, ErrorMessage = "Номер мобильного телефона не корректен!")]
@@ -34,6 +34,6 @@ namespace Domain.Entityes
 
         [Display(Name = "Статус заказа")]
         [Required]
-        public bool OrderStatus { get; set; }
+        public bool OrderStatus { get; set; }      //false - новый, true - выполненный
     }
 }

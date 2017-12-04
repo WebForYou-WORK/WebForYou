@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using Domain.Entityes;
 
 namespace Domain.Abstrac
@@ -7,6 +8,8 @@ namespace Domain.Abstrac
     {
         IEnumerable<SliderOfWork> SliderOfWorks { get; }
         void SaveSlide(SliderOfWork sliderOfWork);
-        void RemoveSlide(int slideId);
+        void RemoveSlide(int slideId, DirectoryInfo directory);
+        void SaveSlidePhoto(int sliderId, string url);
+        void RemoveSlidePhoto(int sliderId, DirectoryInfo directory);
     }
 }

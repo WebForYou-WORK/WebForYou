@@ -15,9 +15,7 @@ namespace Domain.Concrete
         {
             if (blog.NewsId == 0)
             {
-                try
-                {
-                    _context.Blogs.Add(new Blog
+                   _context.Blogs.Add(new Blog
                     {
                         NewsCategory = blog.NewsCategory,
                         NewsDescription = blog.NewsDescription,
@@ -25,30 +23,19 @@ namespace Domain.Concrete
                         NewsDateCreate = DateTime.Now
                     });
                     _context.SaveChanges();
-                }
-                catch (Exception)
-                {
-                    //ignored
-                }
-
             }
             else
             {
                 Blog editBlog = _context.Blogs.FirstOrDefault(x => x.NewsId == blog.NewsId);
                 if (editBlog != null)
                 {
-                    try
-                    {
                         editBlog.NewsCategory = blog.NewsCategory;
                         editBlog.NewsDescription = blog.NewsDescription;
                         editBlog.NewsName = blog.NewsName;
                         _context.SaveChanges();
-                    }
-                    catch (Exception)
-                    {
-                        //ignored
-                    }
                 }
+                else
+                    throw new Exception();
             }
         }
 
@@ -57,14 +44,11 @@ namespace Domain.Concrete
             Blog removeBlog = _context.Blogs.FirstOrDefault(x => x.NewsId == blogId);
             if (removeBlog!=null)
             {
-                try
-                {
                     _context.Blogs.Remove(removeBlog);
                     _context.SaveChanges();
-                }
-                catch (Exception)  { //ignored
-                }
             }
+            else
+                throw new Exception();
         }
     }
 }
