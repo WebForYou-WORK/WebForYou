@@ -107,6 +107,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BlogResources\blog1-min.jpg" />
+    <Content Include="BlogResources\blog10-min.jpg" />
+    <Content Include="BlogResources\blog2-min.jpg" />
+    <Content Include="BlogResources\blog3-min.jpg" />
+    <Content Include="BlogResources\blog4-min.jpg" />
+    <Content Include="BlogResources\blog5-min.jpg" />
+    <Content Include="BlogResources\blog6-min.jpg" />
+    <Content Include="BlogResources\blog7-min.jpg" />
+    <Content Include="BlogResources\blog8-min.jpg" />
+    <Content Include="BlogResources\blog9-min.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -135,6 +145,26 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="SliderResources\slide1-min.jpg" />
+    <Content Include="SliderResources\slide10-min.jpg" />
+    <Content Include="SliderResources\slide11-min.jpg" />
+    <Content Include="SliderResources\slide12-min.jpg" />
+    <Content Include="SliderResources\slide13-min.jpg" />
+    <Content Include="SliderResources\slide14-min.jpg" />
+    <Content Include="SliderResources\slide15-min.jpg" />
+    <Content Include="SliderResources\slide16-min.jpg" />
+    <Content Include="SliderResources\slide17-min.jpg" />
+    <Content Include="SliderResources\slide18-min.jpg" />
+    <Content Include="SliderResources\slide19-min.jpg" />
+    <Content Include="SliderResources\slide2-min.jpg" />
+    <Content Include="SliderResources\slide20-min.jpg" />
+    <Content Include="SliderResources\slide3-min.jpg" />
+    <Content Include="SliderResources\slide4-min.jpg" />
+    <Content Include="SliderResources\slide5-min.jpg" />
+    <Content Include="SliderResources\slide6-min.jpg" />
+    <Content Include="SliderResources\slide7-min.jpg" />
+    <Content Include="SliderResources\slide8-min.jpg" />
+    <Content Include="SliderResources\slide9-min.jpg" />
     <Content Include="Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
@@ -175,7 +205,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="js\" />
-    <Folder Include="ResourcesDB\" />
     <Folder Include="Views\Blog\" />
     <Folder Include="Views\Calculator\" />
     <Folder Include="Views\Services\" />

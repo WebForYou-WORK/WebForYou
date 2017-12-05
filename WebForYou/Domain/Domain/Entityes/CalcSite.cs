@@ -19,11 +19,6 @@ namespace Domain.Entityes
         [StringLength(250, MinimumLength = 3, ErrorMessage = "Длина описания от 3 до 250 символов")]
         public string ModuleDescription { get; set; }
 
-        [Display(Name = "Категория мудуля")]
-        [Required(ErrorMessage = "Пожалуйста, укажите категорию модуля")]
-        [StringLength(25, MinimumLength = 3, ErrorMessage = "Длина названия от 3 до 25 символов")]
-        public string ModuleCategory { get; set; }
-
         [Display(Name = "Стоимость модуля")]
         [Required(ErrorMessage = "Пожалуйста, укажите корректную стоимость модуля")]
         public int ModulePrice { get; set; }
@@ -31,5 +26,7 @@ namespace Domain.Entityes
         [Display(Name = "Дата добавления модуля")]
         [Required]
         public DateTime ModuleDateCreate { get; set; }
+
+        public virtual ModuleCategoryes ModuleCategoryes {get; set;}
     }
 }

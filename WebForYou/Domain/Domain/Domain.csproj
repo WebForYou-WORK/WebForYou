@@ -61,6 +61,7 @@
     <Compile Include="Entityes\Blog.cs" />
     <Compile Include="Entityes\BlogPhoto.cs" />
     <Compile Include="Entityes\CalcSite.cs" />
+    <Compile Include="Entityes\ModuleCategoryes.cs" />
     <Compile Include="Entityes\OrderSite.cs" />
     <Compile Include="Entityes\SliderOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
