@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entityes
@@ -27,6 +28,6 @@ namespace Domain.Entityes
         [Required]
         public DateTime ModuleDateCreate { get; set; }
 
-        public virtual ModuleCategoryes ModuleCategoryes {get; set;}
+        public virtual ICollection<ModuleCategoryes> ModuleCategoryes {get; set;}
     }
 }

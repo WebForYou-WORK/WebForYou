@@ -7,10 +7,24 @@ namespace Domain.Concrete
     {
         public Context() : base("DefaultConnection") { }
     }
+
+    //public class ContextFromDebug : Context
+    //{
+    //    public virtual DbSet<SliderOfWork> SliderOfWorks { get; set; }
+    //    public virtual DbSet<OrderSite> OrderSites { get; set; }
+    //    public virtual DbSet<ModuleCategoryes> ModuleCategoryes { get; set; }
+    //    public virtual DbSet<CalcSite> CalcSites { get; set; }
+    //    public virtual DbSet<Blog> Blogs { get; set; }
+    //    public virtual DbSet<BlogPhoto> BlogPhotos { get; set; }
+    //}
    public class SiteContext : Context
     {
         public virtual DbSet<SliderOfWork> SliderOfWorks { get; set; }
         public virtual DbSet<OrderSite> OrderSites { get; set; }
+    }
+
+    public class CalcContext : Context
+    {
         public virtual DbSet<ModuleCategoryes> ModuleCategoryes { get; set; }
         public virtual DbSet<CalcSite> CalcSites { get; set; }
     }

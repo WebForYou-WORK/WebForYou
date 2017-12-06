@@ -17,6 +17,7 @@ namespace Domain.Entityes
         [Required(ErrorMessage = "Пожалуйста, укажите категорию модуля")]
         [StringLength(25, MinimumLength = 3, ErrorMessage = "Длина названия от 3 до 25 символов")]
         public string ModuleCategory { get; set; }
+
         public virtual ICollection<CalcSite> CalcSites { get; set; }
     }
 }

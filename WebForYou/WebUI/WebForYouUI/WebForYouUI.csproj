@@ -204,6 +204,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="js\" />
     <Folder Include="Views\Blog\" />
     <Folder Include="Views\Calculator\" />

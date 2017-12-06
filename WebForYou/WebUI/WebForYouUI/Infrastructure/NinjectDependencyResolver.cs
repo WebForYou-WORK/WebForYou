@@ -37,6 +37,7 @@ namespace WebForYouUI.Infrastructure
             _kernel.Bind<ICalcSite>().To<EfCalcSite>();
             _kernel.Bind<IOrderSite>().To<EfOrderSite>();
             _kernel.Bind<ISliderOfWoks>().To<EfSliderOfWoks>();
+            _kernel.Bind<IModuleCategoryes>().To<EfModuleCategoryes>();
         }
     }
 }

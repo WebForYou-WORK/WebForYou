@@ -19,9 +19,8 @@ namespace Domain.Entityes
         public string SlideDescription { get; set; }
 
         [Display(Name = "Адрес сайта")]
-        [DataType(DataType.MultilineText)]
         [Required(ErrorMessage = "Пожалуйста, введите URL сайта")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Длина адреса от 3 до 50 символов")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "Длина адреса от 3 до 100 символов")]
         public string SiteAdress { get; set; }
 
         [Display(Name = "Картинка слайда")]

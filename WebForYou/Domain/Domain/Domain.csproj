@@ -50,11 +50,13 @@
     <Compile Include="Abstrac\IBlogPhotoRepossitory.cs" />
     <Compile Include="Abstrac\IBlogRepository.cs" />
     <Compile Include="Abstrac\ICalcSite.cs" />
+    <Compile Include="Abstrac\IModuleCategoryes.cs" />
     <Compile Include="Abstrac\IOrderSite.cs" />
     <Compile Include="Abstrac\ISliderOfWoks.cs" />
     <Compile Include="Concrete\EfBlogPhotoRepossitory.cs" />
     <Compile Include="Concrete\EfBlogRepository.cs" />
     <Compile Include="Concrete\EfCalcSite.cs" />
+    <Compile Include="Concrete\EfModuleCategoryes.cs" />
     <Compile Include="Concrete\EfOrderSite.cs" />
     <Compile Include="Concrete\EfSliderOfWoks.cs" />
     <Compile Include="Concrete\SiteContext.cs" />

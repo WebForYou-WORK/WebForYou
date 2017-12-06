@@ -8,20 +8,25 @@ namespace Domain.Concrete
 {
     public class EfCalcSite : ICalcSite
     {
-        readonly SiteContext _context = new SiteContext();
+        readonly CalcContext _context = new CalcContext();
         public IEnumerable<CalcSite> CalcSites => _context.CalcSites;
-        public void SaveModule(CalcSite calcSite)
+        public void SaveModule(CalcSite calcSite,int categoryId)
         {
             if (calcSite.ModuleId == 0)
             {
-                _context.CalcSites.Add(new CalcSite
+                 CalcSite newCalcSite = new CalcSite 
                 {
-                    ModuleCategory = calcSite.ModuleCategory,
                     ModuleDescription = calcSite.ModuleDescription,
                     ModuleName = calcSite.ModuleName,
                     ModulePrice = calcSite.ModulePrice,
                     ModuleDateCreate = DateTime.Now
-                });
+                };
+                _context.CalcSites.Add(newCalcSite);
+                _context.SaveChanges();
+
+                ModuleCategoryes categoryes =       //связываем таблицы 
+                   _context.ModuleCategoryes.FirstOrDefault(x => x.ModuleCategoryesId == categoryId);
+                categoryes?.CalcSites.Add(_context.CalcSites.FirstOrDefault(x=>x.ModuleId == newCalcSite.ModuleId));
                 _context.SaveChanges();
             }
             else
@@ -29,7 +34,6 @@ namespace Domain.Concrete
                 CalcSite editModule = _context.CalcSites.FirstOrDefault(x => x.ModuleId == calcSite.ModuleId);
                 if (editModule != null)
                 {
-                    editModule.ModuleCategory = calcSite.ModuleCategory;
                     editModule.ModuleDescription = calcSite.ModuleDescription;
                     editModule.ModuleName = calcSite.ModuleName;
                     editModule.ModulePrice = calcSite.ModulePrice;
@@ -37,6 +41,12 @@ namespace Domain.Concrete
                 }
                 else
                     throw new Exception();
+
+                ModuleCategoryes categoryes =
+                  _context.ModuleCategoryes.FirstOrDefault(x => x.ModuleCategoryesId == categoryId);
+                categoryes?.CalcSites.Add(_context.CalcSites.FirstOrDefault(x => x.ModuleId == editModule.ModuleId));
+                _context.SaveChanges();
+
             }
         }
 

@@ -20,7 +20,7 @@ namespace Domain.Concrete
                     ClientName = orderSite.ClientName,
                     ClientPhone = orderSite.ClientPhone,
                     ClientEmail = orderSite.ClientEmail,
-                    SlideDescription = orderSite.SlideDescription,
+                    OrderDescription = orderSite.OrderDescription,
                     OrderDateCreate = DateTime.Now,
                     OrderStatus = false
                 });

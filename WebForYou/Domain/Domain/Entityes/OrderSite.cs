@@ -17,7 +17,7 @@ namespace Domain.Entityes
         [Display(Name = "Дополнительная информация")]
         [DataType(DataType.MultilineText)]
         [StringLength(250, MinimumLength = 5, ErrorMessage = "Длина от 5 до 250 символов")]
-        public string SlideDescription { get; set; }
+        public string OrderDescription { get; set; }
 
         [Display(Name = "E-mail")]
         [Required(ErrorMessage = "пожалуйста оставьте Ваш E-mail")]
