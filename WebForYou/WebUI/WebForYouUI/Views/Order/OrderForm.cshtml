@@ -1,0 +1,63 @@
+﻿@{
+    Layout = null;
+}
+@model Domain.Entityes.OrderSite
+
+<style>
+    .field-validation-error {
+        color: #ff0000;
+    }
+
+    .field-validation-valid {
+        display: none;
+    }
+
+    .input-validation-error {
+        border: 1px solid #ff0000;
+        background-color: #fee;
+    }
+
+    .validation-summary-errors {
+        font-weight: bold;
+        color: #ff0000;
+    }
+
+    .validation-summary-valid {
+        display: none;
+    }
+</style>
+<div class="overlay"></div>
+<div class="visible">
+    <h2 align="center">Форма обратной связи</h2>
+    <div class="content" id ="contentId" >
+        @using (Ajax.BeginForm("NewGneralOrder", "Order", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "contentId"}))
+        {
+            @Html.EditorFor(x => x.ClientName, new { htmlAttributes = new { style = "margin: 0px; width: 60%; height: 20px;", placeholder = "Как к вам обращаться?" } })
+            <br />
+            @Html.ValidationMessageFor(x => x.ClientName)
+            <br />
+            <br />
+            @Html.EditorFor(x => x.ClientEmail, new { htmlAttributes = new { style = "margin: 0px; width: 60%; height: 20px;", placeholder = "Ваш E-mail" } })
+            <br />
+            @Html.ValidationMessageFor(x => x.ClientEmail)
+            <br />
+            <br />
+            @Html.EditorFor(x => x.ClientPhone, new { htmlAttributes = new { style = "margin: 0px; width: 60%; height: 20px;", placeholder = "Ваш номер телефона" } })
+            <br />
+            @Html.ValidationMessageFor(x => x.ClientPhone)
+            <br />
+            <br />
+
+            @Html.EditorFor(x => x.OrderDescription, new { htmlAttributes = new { style = "margin: 0px; width: 100%; height: 80px;", placeholder = "Ваш вопросс" } })
+            <br />
+            @Html.ValidationMessageFor(x => x.OrderDescription)
+            <br />
+            <br />
+            <input class="btn" type="submit" value="Задать вопросс!" />
+        }
+    </div>
+    <button type="button" style="float: right" onClick="getElementById('Order').style.display='none';">закрыть</button>
+</div>
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

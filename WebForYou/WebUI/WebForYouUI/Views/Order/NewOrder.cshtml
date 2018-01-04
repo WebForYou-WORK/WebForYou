@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+@model Domain.Entityes.OrderSite
+<button id="orderButton" class="follow" type="button">Свяжитесь с нами!</button>
+<script>
+    $(document)
+        .ready(function () {
+            $("#orderButton")
+                .click(function () {
+                    var data = {
+                        type: '1'
+                    };
+                    $.ajax({
+                        url: '@Url.Action("OrderForm", "Order")',
+                        type: "POST",
+                        data: data,
+                        success: function (data) {
+                            $("#Order").removeAttr('style'); //удаляем утребут display:none;
+                            $("#Order").html(data);
+                        }
+                    });
+                });
+        });
+</script>
+

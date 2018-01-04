@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Разработка Landing Page";
+}
+
+@model IEnumerable<Domain.Entityes.Modules.LandingCalc>
+<h2>страница для разработки Landing Page</h2>
+<br />
+<h1 align="center">Модули</h1>
+<div style="border: 5px; border-color: black">
+    <h2 align="center">Базовые</h2>
+    @foreach (var i in Model)
+    {
+        if (i.ModuleCategory == "базовый")
+        {
+            <input id="@i.ModuleId" type="checkbox" /><p align="center">@($"{i.ModuleName} - цена {i.ModulePrice} описание - {i.ModuleDescription}")</p>
+        }
+    }
+</div>
+<div style="border: 5px; border-color: black">
+    <h2 align="center">Дополнительные</h2>
+    @foreach (var i in Model)
+    {
+        if (i.ModuleCategory == "дополнительный")
+        {
+            <input id="@i.ModuleId" type="checkbox" /><p align="center">@($"{i.ModuleName} - цена {i.ModulePrice} описание - {i.ModuleDescription}")</p>
+        }
+    }
+</div>
+<div style="border: 5px; border-color: black">
+    <h2 align="center">Дополнительная услуга</h2>
+    @foreach (var i in Model)
+    {
+        if (i.ModuleCategory == "услуга")
+        {
+            <input id="@i.ModuleId" type="checkbox" /><p align="center">@($"{i.ModuleName} - цена {i.ModulePrice} описание - {i.ModuleDescription}")</p>
+        }
+    }
+</div>

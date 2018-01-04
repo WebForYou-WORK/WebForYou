@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Наши Акции";
+}
+@model IEnumerable<Domain.Entityes.Shares>
+@foreach (var i in Model)
+{
+    <h1 align="center">@i.SharesName</h1>
+    <img src="~/SharesResources/@i.PictureShares" style="height: 150px; width: auto; margin-left: 500px;"/>
+    <h2 align="center">@i.SharesDescription</h2>
+    <h3>@i.ShareDateCreate</h3>
+}
